@@ -1,0 +1,36 @@
+# creamos una carpeta para contener el proyecto (MERN-STACK-BARBERIA)
+
+dentro creamos dos carpetas :
+Backend-barberia
+Frontend-barberia
+
+dentro de Backend-barberia creamos carpeta:
+src
+seleccionamos Backend-barberia ejecutamos en la terminal:
+npm init -y
+con esto creamos el package.json
+lo seleccionamos y ahora vamosa instalar las dependencias:
+npm i express
+con este comando acabamos de instalar express
+ahora dentro de src creamos archivo:
+app.json
+en este archivo importamos express:
+import express from 'express';
+despues de importado debemos inicializarlo, primero lo ejecutamos y esto nos devuelve un objeto 
+el cual vamos a guardar en una constante app, listo esta constante app es
+const app = express() 
+basicamente el servidor.
+despues le decimos aplicacion del servidor quiero que escuches en el puerto 3000
+app.listen(3000)
+y cuando inicies quiero que me muestres un mensaje en en server on port 3000:
+console.log('Server on port ', 3000)
+con esto ya tenemos un servidor basico.
+si lo ejecutamos taly como esta obtendremos un error porque nodejs no entiende los import
+entonces para decirle que utilice esta sintaxis en vex del require nos vamos al:
+package.json 
+añadimos debajo del main :
+"type": "module",
+con esto le estamos diciendo que utilice los modulos de (ecma script 6)
+ahora si podemos ejecutar el servidor:
+node src/app.js
+
