@@ -1,3 +1,4 @@
+fecha de creacion 11 dic 2024
 # creamos una carpeta para contener el proyecto (MERN-STACK-BARBERIA)
 
 dentro creamos dos carpetas :
@@ -25,12 +26,22 @@ app.listen(3000)
 y cuando inicies quiero que me muestres un mensaje en en server on port 3000:
 console.log('Server on port ', 3000)
 con esto ya tenemos un servidor basico.
-si lo ejecutamos taly como esta obtendremos un error porque nodejs no entiende los import
-entonces para decirle que utilice esta sintaxis en vex del require nos vamos al:
+si lo ejecutamos tal y como esta obtendremos un error porque nodejs no entiende los import
+entonces para decirle que utilice esta sintaxis en vez del require nos vamos al:
 package.json 
 añadimos debajo del main :
 "type": "module",
 con esto le estamos diciendo que utilice los modulos de (ecma script 6)
 ahora si podemos ejecutar el servidor:
 node src/app.js
-
+dentro de src creamos las siguientes carpetas:
+routes
+controllers
+models
+middlewares
+schemas
+libs
+ahora creamos dos archivos:
+db.js
+config.js
+index.js
